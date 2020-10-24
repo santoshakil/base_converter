@@ -45,7 +45,7 @@ class _BaseConverterState extends State<BaseConverter> {
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               SizedBox(
-                height: MediaQuery.of(context).size.height / 15,
+                height: 20,
               ),
               Container(
                 height: MediaQuery.of(context).size.height / 10,
@@ -61,9 +61,9 @@ class _BaseConverterState extends State<BaseConverter> {
                   ),
                 ),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height / 20),
+              SizedBox(height: MediaQuery.of(context).size.height / 100),
               Container(
-                height: MediaQuery.of(context).size.height / 9,
+                height: MediaQuery.of(context).size.height / 12,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Card(
                   shape: RoundedRectangleBorder(
@@ -93,12 +93,12 @@ class _BaseConverterState extends State<BaseConverter> {
               ),
               Container(
                 alignment: Alignment.center,
-                height: MediaQuery.of(context).size.height / 15,
+                height: MediaQuery.of(context).size.height / 20,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Text("Decimal"),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 9,
+                height: MediaQuery.of(context).size.height / 12,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Card(
                   shape: RoundedRectangleBorder(
@@ -126,12 +126,12 @@ class _BaseConverterState extends State<BaseConverter> {
               ),
               Container(
                 alignment: Alignment.center,
-                height: MediaQuery.of(context).size.height / 15,
+                height: MediaQuery.of(context).size.height / 20,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Text("Binary"),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 9,
+                height: MediaQuery.of(context).size.height / 12,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Card(
                   shape: RoundedRectangleBorder(
@@ -160,12 +160,12 @@ class _BaseConverterState extends State<BaseConverter> {
               ),
               Container(
                 alignment: Alignment.center,
-                height: MediaQuery.of(context).size.height / 15,
+                height: MediaQuery.of(context).size.height / 20,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Text("Octal"),
               ),
               Container(
-                height: MediaQuery.of(context).size.height / 9,
+                height: MediaQuery.of(context).size.height / 12,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Card(
                   shape: RoundedRectangleBorder(
@@ -196,11 +196,11 @@ class _BaseConverterState extends State<BaseConverter> {
               ),
               Container(
                 alignment: Alignment.center,
-                height: MediaQuery.of(context).size.height / 15,
+                height: MediaQuery.of(context).size.height / 20,
                 width: MediaQuery.of(context).size.width / 1.2,
                 child: Text("HexaDecimal"),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height / 20),
+              SizedBox(height: MediaQuery.of(context).size.height / 5),
             ],
           ),
         ),
