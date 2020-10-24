@@ -36,16 +36,6 @@ class _BaseConverterState extends State<BaseConverter> {
     return Scaffold(
       backgroundColor: Colors.white,
       resizeToAvoidBottomPadding: false,
-//      appBar: AppBar(
-//        title: Text(
-//          'AiO Calculator',
-//          style: TextStyle(
-//              color: Colors.blue[500], letterSpacing: 2, wordSpacing: 5),
-//        ),
-//        centerTitle: true,
-//        backgroundColor: Colors.white,
-//        elevation: 3,
-//      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -55,14 +45,16 @@ class _BaseConverterState extends State<BaseConverter> {
               height: 50,
             ),
             Container(
-              child: new Text("Convert Numbers",
-                  style: GoogleFonts.lato(
-                      textStyle: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1,
-                          wordSpacing: 5,
-                          color: Colors.blue[500]))),
+              child: new Text(
+                "Convert Numbers",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1,
+                  wordSpacing: 5,
+                  color: Colors.blue[500],
+                ),
+              ),
             ),
             SizedBox(height: 30),
             Container(
