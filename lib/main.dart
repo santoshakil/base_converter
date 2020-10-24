@@ -33,155 +33,176 @@ class _BaseConverterState extends State<BaseConverter> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: false,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              height: 50,
-            ),
-            Container(
-              child: new Text(
-                "Convert Numbers",
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1,
-                  wordSpacing: 5,
-                  color: Colors.blue[500],
-                ),
+      resizeToAvoidBottomPadding: true,
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        alignment: Alignment.center,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              SizedBox(
+                height: MediaQuery.of(context).size.height / 15,
               ),
-            ),
-            SizedBox(height: 30),
-            Container(
-              width: 300,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: Colors.white,
-                elevation: 8,
-                child: new Container(
-                  padding: EdgeInsets.all(5.0),
-                  child: new TextField(
-                    maxLines: 1,
-                    style: TextStyle(color: Colors.blue),
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      // ignore: deprecated_member_use
-                      WhitelistingTextInputFormatter(
-                        RegExp(
-                          '[\0, \1, \2, \3, \4, \5, \6, \7, \8, \9,]',
-                        ),
-                      )
-                    ],
-                    controller: dec,
-                    onChanged: _fromDec,
+              Container(
+                height: MediaQuery.of(context).size.height / 10,
+                width: MediaQuery.of(context).size.width / 1.5,
+                child: new Text(
+                  "Convert Numbers",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1,
+                    wordSpacing: 5,
+                    color: Colors.blue[500],
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30,
-              child: Text("Decimal"),
-            ),
-            Container(
-              width: 300,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: Colors.white,
-                elevation: 8,
-                child: new Container(
-                  padding: EdgeInsets.all(5.0),
-                  child: new TextField(
-                    maxLines: 1,
-                    style: TextStyle(color: Colors.blue),
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      // ignore: deprecated_member_use
-                      WhitelistingTextInputFormatter(
-                        RegExp('[\0, \1]'),
-                      )
-                    ],
-                    controller: bin,
-                    onChanged: _fromBin,
+              SizedBox(height: MediaQuery.of(context).size.height / 20),
+              Container(
+                height: MediaQuery.of(context).size.height / 9,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  color: Colors.white,
+                  elevation: 8,
+                  child: new Container(
+                    padding: EdgeInsets.all(5.0),
+                    child: new TextField(
+                      maxLines: 1,
+                      style: TextStyle(color: Colors.blue),
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        // ignore: deprecated_member_use
+                        WhitelistingTextInputFormatter(
+                          RegExp(
+                            '[\0, \1, \2, \3, \4, \5, \6, \7, \8, \9,]',
+                          ),
+                        )
+                      ],
+                      controller: dec,
+                      onChanged: _fromDec,
+                    ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30,
-              child: Text("Binary"),
-            ),
-            Container(
-              width: 300,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: Colors.white,
-                elevation: 8,
-                child: new Container(
-                  padding: EdgeInsets.all(5.0),
-                  child: new TextField(
-                    maxLines: 1,
-                    style: TextStyle(color: Colors.blue),
-                    keyboardType: TextInputType.number,
-                    inputFormatters: [
-                      // ignore: deprecated_member_use
-                      WhitelistingTextInputFormatter(
-                        RegExp('[\0, \1, \2, \3, \4, \5, \6, \7,]',
-                            caseSensitive: false),
-                      )
-                    ],
-                    controller: oct,
-                    onChanged: _fromOct,
+              Container(
+                alignment: Alignment.center,
+                height: MediaQuery.of(context).size.height / 15,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Text("Decimal"),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 9,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  color: Colors.white,
+                  elevation: 8,
+                  child: new Container(
+                    padding: EdgeInsets.all(5.0),
+                    child: new TextField(
+                      maxLines: 1,
+                      style: TextStyle(color: Colors.blue),
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        // ignore: deprecated_member_use
+                        WhitelistingTextInputFormatter(
+                          RegExp('[\0, \1]'),
+                        )
+                      ],
+                      controller: bin,
+                      onChanged: _fromBin,
+                    ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30,
-              child: Text("Octal"),
-            ),
-            Container(
-              width: 300,
-              child: Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                color: Colors.white,
-                elevation: 8,
-                child: new Container(
-                  padding: EdgeInsets.all(5.0),
-                  child: new TextField(
-                    maxLines: 1,
-                    style: TextStyle(color: Colors.blue),
-                    keyboardType: TextInputType.text,
-                    textCapitalization: TextCapitalization.characters,
-                    inputFormatters: [
-                      // ignore: deprecated_member_use
-                      WhitelistingTextInputFormatter(
-                        RegExp(
-                            '[\0, \1, \2, \3, \4, \5, \6, \7, \8, \9, \a, \A, \b, \B, \c, \C, \d, \D, \e, \E, \f, \F]',
-                            caseSensitive: false),
-                      )
-                    ],
-                    controller: hex,
-                    onChanged: _fromHex,
+              Container(
+                alignment: Alignment.center,
+                height: MediaQuery.of(context).size.height / 15,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Text("Binary"),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 9,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  color: Colors.white,
+                  elevation: 8,
+                  child: new Container(
+                    padding: EdgeInsets.all(5.0),
+                    child: new TextField(
+                      maxLines: 1,
+                      style: TextStyle(color: Colors.blue),
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        // ignore: deprecated_member_use
+                        WhitelistingTextInputFormatter(
+                          RegExp('[\0, \1, \2, \3, \4, \5, \6, \7,]',
+                              caseSensitive: false),
+                        )
+                      ],
+                      controller: oct,
+                      onChanged: _fromOct,
+                    ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 30,
-              child: Text("HexaDecimal"),
-            ),
-          ],
+              Container(
+                alignment: Alignment.center,
+                height: MediaQuery.of(context).size.height / 15,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Text("Octal"),
+              ),
+              Container(
+                height: MediaQuery.of(context).size.height / 9,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  color: Colors.white,
+                  elevation: 8,
+                  child: new Container(
+                    padding: EdgeInsets.all(5.0),
+                    child: new TextField(
+                      maxLines: 1,
+                      style: TextStyle(color: Colors.blue),
+                      keyboardType: TextInputType.text,
+                      textCapitalization: TextCapitalization.characters,
+                      inputFormatters: [
+                        // ignore: deprecated_member_use
+                        WhitelistingTextInputFormatter(
+                          RegExp(
+                              '[\0, \1, \2, \3, \4, \5, \6, \7, \8, \9, \a, \A, \b, \B, \c, \C, \d, \D, \e, \E, \f, \F]',
+                              caseSensitive: false),
+                        )
+                      ],
+                      controller: hex,
+                      onChanged: _fromHex,
+                    ),
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                height: MediaQuery.of(context).size.height / 15,
+                width: MediaQuery.of(context).size.width / 1.2,
+                child: Text("HexaDecimal"),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height / 20),
+            ],
+          ),
         ),
       ),
     );
