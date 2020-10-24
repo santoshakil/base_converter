@@ -80,6 +80,7 @@ class _BaseConverterState extends State<BaseConverter> {
                     style: TextStyle(color: Colors.blue),
                     keyboardType: TextInputType.number,
                     inputFormatters: [
+                      // ignore: deprecated_member_use
                       WhitelistingTextInputFormatter(
                         RegExp(
                           '[\0, \1, \2, \3, \4, \5, \6, \7, \8, \9,]',
@@ -111,6 +112,7 @@ class _BaseConverterState extends State<BaseConverter> {
                     style: TextStyle(color: Colors.blue),
                     keyboardType: TextInputType.number,
                     inputFormatters: [
+                      // ignore: deprecated_member_use
                       WhitelistingTextInputFormatter(
                         RegExp('[\0, \1]'),
                       )
@@ -140,6 +142,7 @@ class _BaseConverterState extends State<BaseConverter> {
                     style: TextStyle(color: Colors.blue),
                     keyboardType: TextInputType.number,
                     inputFormatters: [
+                      // ignore: deprecated_member_use
                       WhitelistingTextInputFormatter(
                         RegExp('[\0, \1, \2, \3, \4, \5, \6, \7,]',
                             caseSensitive: false),
@@ -171,6 +174,7 @@ class _BaseConverterState extends State<BaseConverter> {
                     keyboardType: TextInputType.text,
                     textCapitalization: TextCapitalization.characters,
                     inputFormatters: [
+                      // ignore: deprecated_member_use
                       WhitelistingTextInputFormatter(
                         RegExp(
                             '[\0, \1, \2, \3, \4, \5, \6, \7, \8, \9, \a, \A, \b, \B, \c, \C, \d, \D, \e, \E, \f, \F]',
